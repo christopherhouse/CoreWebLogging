@@ -10,7 +10,7 @@ public class Program
 
         // Add services to the container.
         builder.Services.AddRazorPages();
-
+        builder.Logging.AddAzureWebAppDiagnostics();
         builder.Services.Configure<AzureBlobLoggerOptions>(options =>
         {
             options.BlobName = "output.log";
