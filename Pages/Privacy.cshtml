@@ -1,7 +1,9 @@
 ﻿@page
+@using System.Diagnostics
 @model PrivacyModel
 @{
     ViewData["Title"] = "Privacy Policy";
+    Trace.WriteLine("Here's some tracing from privacy");
 }
 <h1>@ViewData["Title"]</h1>
 
