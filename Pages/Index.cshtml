@@ -1,7 +1,9 @@
 ﻿@page
+@using System.Diagnostics
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+    Trace.WriteLine("Here's some tracing from index");
 }
 
 <div class="text-center">
