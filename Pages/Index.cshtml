@@ -1,9 +1,11 @@
 ﻿@page
 @using System.Diagnostics
 @model IndexModel
+@inject ILogger<Index> logger
 @{
     ViewData["Title"] = "Home page";
     Trace.WriteLine("Here's some tracing from index");
+    logger.LogInformation("Here's some stuff from ILogger");
 }
 
 <div class="text-center">
