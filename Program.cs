@@ -1,3 +1,5 @@
+using Microsoft.Extensions.Logging.AzureAppServices;
+
 namespace CoreWebLogging;
 
 public class Program
@@ -8,6 +10,12 @@ public class Program
 
         // Add services to the container.
         builder.Services.AddRazorPages();
+
+        builder.Services.Configure<AzureBlobLoggerOptions>(options =>
+        {
+            options.BlobName = "output.log";
+            options.IsEnabled = true;
+        });
 
         var app = builder.Build();
 
